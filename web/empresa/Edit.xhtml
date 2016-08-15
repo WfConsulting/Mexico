@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditEmpresaTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{empresaController.selected.id}" title="#{bundle.EditEmpresaTitle_id}" required="true" requiredMessage="#{bundle.EditEmpresaRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_nombre}" for="nombre" />
+                    <h:inputText id="nombre" value="#{empresaController.selected.nombre}" title="#{bundle.EditEmpresaTitle_nombre}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_nit}" for="nit" />
+                    <h:inputText id="nit" value="#{empresaController.selected.nit}" title="#{bundle.EditEmpresaTitle_nit}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_digVeri}" for="digVeri" />
+                    <h:inputText id="digVeri" value="#{empresaController.selected.digVeri}" title="#{bundle.EditEmpresaTitle_digVeri}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_correo}" for="correo" />
+                    <h:inputText id="correo" value="#{empresaController.selected.correo}" title="#{bundle.EditEmpresaTitle_correo}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_direccion}" for="direccion" />
+                    <h:inputText id="direccion" value="#{empresaController.selected.direccion}" title="#{bundle.EditEmpresaTitle_direccion}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_telefono}" for="telefono" />
+                    <h:inputText id="telefono" value="#{empresaController.selected.telefono}" title="#{bundle.EditEmpresaTitle_telefono}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_url}" for="url" />
+                    <h:inputText id="url" value="#{empresaController.selected.url}" title="#{bundle.EditEmpresaTitle_url}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_pais}" for="pais" />
+                    <h:inputText id="pais" value="#{empresaController.selected.pais}" title="#{bundle.EditEmpresaTitle_pais}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_departamento}" for="departamento" />
+                    <h:inputText id="departamento" value="#{empresaController.selected.departamento}" title="#{bundle.EditEmpresaTitle_departamento}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_ciudad}" for="ciudad" />
+                    <h:inputText id="ciudad" value="#{empresaController.selected.ciudad}" title="#{bundle.EditEmpresaTitle_ciudad}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_porImpuesto}" for="porImpuesto" />
+                    <h:inputText id="porImpuesto" value="#{empresaController.selected.porImpuesto}" title="#{bundle.EditEmpresaTitle_porImpuesto}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_nomImpuesto}" for="nomImpuesto" />
+                    <h:inputText id="nomImpuesto" value="#{empresaController.selected.nomImpuesto}" title="#{bundle.EditEmpresaTitle_nomImpuesto}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_monedaSimbolo}" for="monedaSimbolo" />
+                    <h:inputText id="monedaSimbolo" value="#{empresaController.selected.monedaSimbolo}" title="#{bundle.EditEmpresaTitle_monedaSimbolo}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_monedaNombre}" for="monedaNombre" />
+                    <h:inputText id="monedaNombre" value="#{empresaController.selected.monedaNombre}" title="#{bundle.EditEmpresaTitle_monedaNombre}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_regimen}" for="regimen" />
+                    <h:inputText id="regimen" value="#{empresaController.selected.regimen}" title="#{bundle.EditEmpresaTitle_regimen}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_ssmtp}" for="ssmtp" />
+                    <h:inputText id="ssmtp" value="#{empresaController.selected.ssmtp}" title="#{bundle.EditEmpresaTitle_ssmtp}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_usmtp}" for="usmtp" />
+                    <h:inputText id="usmtp" value="#{empresaController.selected.usmtp}" title="#{bundle.EditEmpresaTitle_usmtp}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_csmtp}" for="csmtp" />
+                    <h:inputText id="csmtp" value="#{empresaController.selected.csmtp}" title="#{bundle.EditEmpresaTitle_csmtp}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_psmtp}" for="psmtp" />
+                    <h:inputText id="psmtp" value="#{empresaController.selected.psmtp}" title="#{bundle.EditEmpresaTitle_psmtp}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_envia}" for="envia" />
+                    <h:inputText id="envia" value="#{empresaController.selected.envia}" title="#{bundle.EditEmpresaTitle_envia}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_logo}" for="logo" />
+                    <h:inputText id="logo" value="#{empresaController.selected.logo}" title="#{bundle.EditEmpresaTitle_logo}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_resolucion}" for="resolucion" />
+                    <h:inputText id="resolucion" value="#{empresaController.selected.resolucion}" title="#{bundle.EditEmpresaTitle_resolucion}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_leyenda}" for="leyenda" />
+                    <h:inputText id="leyenda" value="#{empresaController.selected.leyenda}" title="#{bundle.EditEmpresaTitle_leyenda}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_extra1}" for="extra1" />
+                    <h:inputText id="extra1" value="#{empresaController.selected.extra1}" title="#{bundle.EditEmpresaTitle_extra1}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_extra2}" for="extra2" />
+                    <h:inputText id="extra2" value="#{empresaController.selected.extra2}" title="#{bundle.EditEmpresaTitle_extra2}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_extra3}" for="extra3" />
+                    <h:inputText id="extra3" value="#{empresaController.selected.extra3}" title="#{bundle.EditEmpresaTitle_extra3}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_extra4}" for="extra4" />
+                    <h:inputText id="extra4" value="#{empresaController.selected.extra4}" title="#{bundle.EditEmpresaTitle_extra4}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_extra5}" for="extra5" />
+                    <h:inputText id="extra5" value="#{empresaController.selected.extra5}" title="#{bundle.EditEmpresaTitle_extra5}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_tipo}" for="tipo" />
+                    <h:inputText id="tipo" value="#{empresaController.selected.tipo}" title="#{bundle.EditEmpresaTitle_tipo}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_municipio}" for="municipio" />
+                    <h:inputText id="municipio" value="#{empresaController.selected.municipio}" title="#{bundle.EditEmpresaTitle_municipio}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_primerNombre}" for="primerNombre" />
+                    <h:inputText id="primerNombre" value="#{empresaController.selected.primerNombre}" title="#{bundle.EditEmpresaTitle_primerNombre}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_segundoNombre}" for="segundoNombre" />
+                    <h:inputText id="segundoNombre" value="#{empresaController.selected.segundoNombre}" title="#{bundle.EditEmpresaTitle_segundoNombre}" />
+                    <h:outputLabel value="#{bundle.EditEmpresaLabel_apellidos}" for="apellidos" />
+                    <h:inputText id="apellidos" value="#{empresaController.selected.apellidos}" title="#{bundle.EditEmpresaTitle_apellidos}" />
+                </h:panelGrid>
+                <h:commandLink action="#{empresaController.update}" value="#{bundle.EditEmpresaSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditEmpresaViewLink}"/>
+                <br />
+                <h:commandLink action="#{empresaController.prepareList}" value="#{bundle.EditEmpresaShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditEmpresaIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
